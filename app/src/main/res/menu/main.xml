@@ -6,4 +6,7 @@
         android:title="@string/action_settings"
         android:orderInCategory="100"
         app:showAsAction="never" />
+    <item android:id="@+id/action_map"
+        android:title="@strig/action_map"
+        app:showAsAction = "never" />
 </menu>

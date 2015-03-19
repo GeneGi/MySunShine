@@ -9,6 +9,7 @@
     <string name="pref_location_label">Location</string>
     <string name="pref_location_key" translatable = "false">location</string>
     <string name="pref_location_default" translatable="false">94043</string>
+    <string name="action_map">Map location</string>
     <!-- Label for the temperature units preference [CHAR LIMIT=30] -->
     <string name="pref_units_label">Temperature Units</string>
 
@@ -26,5 +27,5 @@
 
     <!-- Value in SharedPreferences for imperial temperature unit option [CHAR LIMIT=NONE] -->
     <string name="pref_units_imperial" translatable="false">imperial</string>
-
+    
 </resources>
