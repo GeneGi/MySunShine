@@ -10,6 +10,7 @@
     <string name="pref_location_key" translatable = "false">location</string>
     <string name="pref_location_default" translatable="false">94043</string>
     <string name="action_map">Map location</string>
+    <string name="action_share">Share</string>
     <!-- Label for the temperature units preference [CHAR LIMIT=30] -->
     <string name="pref_units_label">Temperature Units</string>
 
