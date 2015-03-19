@@ -9,7 +9,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.os.Build;
 import android.content.Intent;
 import android.widget.TextView;
 
@@ -30,7 +29,7 @@ public class DetailActivity extends ActionBarActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_detail, menu);
+        getMenuInflater().inflate(R.menu.detail, menu);
         return true;
     }
 
@@ -64,9 +63,9 @@ public class DetailActivity extends ActionBarActivity {
             View rootView = inflater.inflate(R.layout.fragment_detail, container, false);
             Intent intent = getActivity().getIntent();
             if (intent!=null && intent.hasExtra(Intent.EXTRA_TEXT)) {
-                String forecast = intent.getStringExtra(Intent.EXTRA_TEXT);
+                String forecastStr = intent.getStringExtra(Intent.EXTRA_TEXT);
                 ((TextView) rootView.findViewById(R.id.detail_text))
-                        .setText(forecast);
+                        .setText(forecastStr);
             }
             return rootView;
         }
