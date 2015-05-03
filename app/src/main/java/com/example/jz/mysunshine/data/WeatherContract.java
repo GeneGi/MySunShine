@@ -1,8 +1,4 @@
 package com.example.jz.mysunshine.data;
-
-/**
- * Created by jz on 2015/4/20.
- */
 /*
  * Copyright (C) 2014 The Android Open Source Project
  *
