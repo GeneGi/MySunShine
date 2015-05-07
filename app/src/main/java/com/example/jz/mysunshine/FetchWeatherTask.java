@@ -43,7 +43,8 @@ import java.util.Vector;
 public class FetchWeatherTask extends AsyncTask<String, Void, Void> {
 
     private final String LOG_TAG = FetchWeatherTask.class.getSimpleName();
-
+    //private final String API_KEY = "APPID";
+    //private final String API_KEY_VALUE = "YOUR_API_KEY";
     private final Context mContext;
 
     public FetchWeatherTask(Context context) {
@@ -284,17 +285,19 @@ public class FetchWeatherTask extends AsyncTask<String, Void, Void> {
                     .appendQueryParameter(FORMAT_PARAM, format)
                     .appendQueryParameter(UNITS_PARAM, units)
                     .appendQueryParameter(DAYS_PARAM, Integer.toString(numDays))
+                    //.appendQueryParameter(API_KEY,API_KEY_VALUE)
                     .build();
 
             URL url = new URL(builtUri.toString());
 
             // Create the request to OpenWeatherMap, and open the connection
             urlConnection = (HttpURLConnection) url.openConnection();
+            
             urlConnection.setRequestMethod("GET");
             urlConnection.connect();
-
             // Read the input stream into a String
-            InputStream inputStream = urlConnection.getInputStream();
+            InputStream inputStream;
+            inputStream = urlConnection.getInputStream();
             StringBuffer buffer = new StringBuffer();
             if (inputStream == null) {
                 // Nothing to do.
